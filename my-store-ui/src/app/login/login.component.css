@@ -1,0 +1,19 @@
+label{
+    display: block;
+}
+
+input{
+    display: block;
+    color: black;
+    width: 15em;
+}
+
+.login-form{
+    margin-left: 30%;
+    padding: 3em;
+}
+
+.login-button{
+    width: 15em;
+    margin: 1em 1em 1em 0em;
+}

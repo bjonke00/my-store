@@ -1,0 +1,83 @@
+<div class="register-form">
+
+  <h4>Register</h4>
+  
+  <!-- <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  
+    <div class=register-form-input>
+      <label for="username">
+        Username
+      </label>
+      <input id="username" type="text" formControlName="username" required>
+    </div> -->
+
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" [(ngModel)]="user.username" 
+            class="form-control" id="username" name="username" placeholder="Enter username"
+            required #username="ngModel">
+        </div>
+    
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="text" [(ngModel)]="user.password" 
+            class="form-control" id="password" name="password" placeholder="Enter password"
+            required #username="ngModel">
+        </div>
+
+        <!-- <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" [(ngModel)]="user.email" 
+            class="form-control" id="email" name="email" placeholder="Enter Email"
+            required #username="ngModel">
+        </div> -->
+    <!-- <div class=register-form-input>
+      <label for="pw">
+        Password
+      </label>
+      <input id="pw" type="text" formControlName="pw" required>
+    </div> -->
+    
+    <!-- <div class=register-form-input>
+      <label for="cpw">
+        Confirm Password
+      </label>
+      <input id="cpw" type="text" formControlName="cpw" required>
+    </div>
+
+    <div class=register-form-input>
+      <label for="email">
+        Email
+      </label>
+      <input id="email" type="text" formControlName="email" required>
+    </div>
+
+    <div class=register-form-input>
+      <label for="fname">
+        First
+      </label>
+    <input id="fname" type="text" formControlName="fname" required>
+    </div>
+
+    <div class=register-form-input>
+        <label for="lname">
+          Last
+        </label>
+      <input id="lname" type="text" formControlName="lname" required>
+    </div>
+
+    <div class=register-form-input>
+      <label for="address">
+       Address
+      </label>
+      <input id="address1" type="text" formControlName="address1" required>
+      <input id="address2" type="text" formControlName="address2" required>
+    </div>  -->
+
+    <button class="register-button register-form-input" type="submit">
+      Submit
+    </button>
+  
+  </form>
+</div>

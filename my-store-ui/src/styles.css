@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    color: aquamarine;
+}
+
+body{
+    background-color: black;
+    margin:1em;
+}
+
+button {
+	background-color:aquamarine;
+	/* display:inline-block; */
+	cursor:pointer;
+	color:black;
+    font-family:Arial;
+    border-radius:1em;
+    /* margin: 0em 0em 0em 0em; */
+}
+
+button:hover {
+	background-color:blueviolet;
+}
+
+img{
+    size: 2em 2em 2em 2em;
+}

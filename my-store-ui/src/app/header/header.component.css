@@ -1,0 +1,33 @@
+.nav {
+    background-color: blueviolet; 
+    list-style-type: none;
+    text-align: center;
+    margin: 0em;
+    padding: 0em;
+  }
+  
+  .nav li {
+    display: inline-block;
+    font-size: 2em;
+    margin-left: auto;
+    margin-right:auto;
+    cursor:pointer;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .nav {
+      display: grid;
+      grid-template-columns: 10em auto auto 6em;
+      background-color: blueviolet; 
+      list-style-type: none;
+      text-align: center;
+      margin: 0em;
+      padding: 0em;
+   
+    }
+    .nav li {
+      font-size: 2em;
+      margin: 0em .25em 0em .25em;
+      cursor:pointer;
+    }
+  }

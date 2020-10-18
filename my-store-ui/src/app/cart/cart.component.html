@@ -1,0 +1,20 @@
+<h4>Shopping Cart</h4>
+
+<div class="cart-items" *ngFor="let item of items">
+    
+  <div class="cart-item">
+    <span class="cart-item-attribute"><img  src="{{item.img}}" width="100" height="100"></span>
+    <span class="cart-item-attribute">{{ item.name }}</span>
+    <span class="cart-item-attribute">${{ item.price }}</span>
+    <span class="cart-item-attribute">qty: <input type="number" [(ngModel)]="item.quantity" min="1" max="10"></span>
+    <span  class="cart-item-attribute"><button class="remove-button" (click)="remove(item)">remove</button></span>
+  </div>
+  
+</div>
+
+<div class="checkout-button">
+  <button *ngIf="isUserLoggedIn() && !isCartEmpty()" routerLink="/checkout">Checkout</button>
+  <button *ngIf="!isUserLoggedIn() && !isCartEmpty()" routerLink="/login">Checkout</button>
+</div>
+
+<h4 *ngIf="isCartEmpty()">Cart is empty.</h4>

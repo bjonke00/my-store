@@ -1,0 +1,14 @@
+<div class="product-details">
+  <img class="product-details-attribute" src="{{product.img}}" width="300" height="300">
+  <h4 class="product-details-attribute">{{product.name}}</h4>
+  <span class="product-details-attribute">${{product.price}}</span>
+  <button class="product-details-attribute"
+  placement="right"
+  ngbPopover="Added to cart!"
+  (click)="addToCart(product)"
+  >
+    Buy
+  </button>
+  <p class="product-details-attribute">{{product.desc}}</p>
+</div>
+ 

@@ -1,0 +1,35 @@
+h4{
+    text-align: center;
+}
+
+input{
+    background-color: blueviolet;
+}
+
+.cart-item{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+@media only screen and (max-width: 600px) {
+    .cart-item{
+        display: grid;
+        grid-template-columns: auto 8em 8em 8em auto;
+    }
+  }
+
+.cart-item-attribute{
+    margin: .5em .5em .5em .5em;
+}
+
+.remove-button{
+    background:none;
+    border:none;
+    color: aquamarine;
+}
+
+.checkout-button{
+    position: absolute;
+    right:0;
+    margin: 2em;
+}

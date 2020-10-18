@@ -1,0 +1,12 @@
+h4{
+    text-align: center;
+}
+
+.product-list{
+    margin: 1em 1em 1em 1em;
+    display:inline-block;
+}
+
+img{
+    cursor: pointer;
+}
