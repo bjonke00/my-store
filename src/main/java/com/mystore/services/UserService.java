@@ -1,5 +1,7 @@
 package com.mystore.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,13 +12,22 @@ import com.mystore.repositories.UserRepository;
 public class UserService {
 	
 	@Autowired
-	UserRepository repo;
-	
-	public User getUserById(Long id) {
-		return repo.getOne(id);
-	}
+	UserRepository userRepository;
 	
 	public void saveUser(User user) {
-		repo.save(user);
+		userRepository.save(user);
+	}
+	
+	public void register(User user) {
+		userRepository.save(user);
+	}
+	
+	public boolean login(User user) {
+		List<User> users = userRepository.getUser(user.getUsername(), user.getPassword());
+		return !users.isEmpty();
+	}
+	
+	public User getUser(User user) {
+		return userRepository.getUser(user.getUsername(), user.getPassword()).get(0);
 	}
 }
