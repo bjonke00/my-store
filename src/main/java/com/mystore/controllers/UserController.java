@@ -19,22 +19,12 @@ public class UserController {
     
 	@Autowired
     private UserService userService;
-	
-	@Autowired
-	private UserRepository userRepository;
- 
-    @PostMapping(path = "/user", consumes = "application/json", produces = "application/json")
-    @ResponseStatus(HttpStatus.OK)
-    public void addUser(@RequestBody User user) {
-        userService.saveUser(user);
-    }
     
     @PostMapping(path = "/register", consumes = "application/json", produces = "application/json")
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<User> register(@RequestBody User user) {
         try {
         	userService.register(user);
-        	userRepository.save(user);
         }catch(Exception e) {
         	return new ResponseEntity<>(user, HttpStatus.INTERNAL_SERVER_ERROR);
         }
